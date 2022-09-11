@@ -1,0 +1,16 @@
+github.com/gustavoguanabara
+gustavoguanabara.github.io
+
+video 12
+h1 titulo
+hr linha 
+p paragrafo
+
+video 13 e 14
+<p> paragrafo
+<br> quebra de linha
+nao usar <br><Br><br> para dar mais espacamentos entre linha
+
+caracteres especiais usar & (tabela de nomes dos simbolos no pdf aula 14)
+
+emojis usar com &#x(codigo) [pegar codigo no site emojipedia.org]

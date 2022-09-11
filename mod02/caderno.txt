@@ -1,0 +1,514 @@
+cap 13/4 patela de cores
+color.adobe.com
+paletton.com
+coolors.co
+
+cap 13/5 
+plugin colorzilla para captura cores. chrome web services
+
+cap 13/6 criando um exemplo real
+feito um site com um pouco mais de estilo e harmonico nas cores
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #C2E6AA, #95E063);
+}
+
+main {
+    background-color: white;
+    border-radius: 10px; /*arredonda as bordas */
+    box-shadow: 5px 5px 15px #2e461f72; /*sombra na borda */
+    width: 600px; 
+    padding: 10px; /* da um engordada na parte branca */
+    margin: auto; /* centraliza */
+}
+
+h1 {
+    color: #40612B;
+    text-align: center;
+    text-shadow: 1px 1px #293e1c88;
+}
+
+h2 {
+color: #73AD4C;
+}
+
+p {
+    text-align: justify;
+}
+
+mod 14/1 primeiros passos em tipografia
+
+mod 14/4
+font-family
+font-size em (conta em M do dispositivo)
+
+mod 14/5
+font-family
+font-weight: 100-900/bold/bolder/lighter/normal...  //negrito (depende da fonte)
+font-size
+font-style: lighter/italic/normal //italico
+//shorthand font//
+style - weight - size - family (nessa ordem)
+font: italic bolder 3em 'work sans', sans-serif; 
+// mesma coisa de cima //
+text-decoration: underline //sublinhado
+
+mod 14/6 usando google fonts
+escolher font no google fonts e copiar o import
+colocar logo depois de <STYLE> pra carregar primeiro
+@import  url('')
+
+mod 14/8 capturando fontes usadas em um site
+extensao google fonts ninja
+extensao webdevelopes (ativar/desativar css/js do site) aula bem anterior
+
+mod 14/9 detectando fontes dentro da imagem
+resultados nem sempre vao funcionar
+https://www.whatfontis.com/
+https://www.fontsquirrel.com/
+https://www.myfonts.com/
+
+mod 14/10 alinhamento de textos com css
+ <style>
+        body {
+            font: normal 16px arial, verdana, serif;
+            text-align: left;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: right;
+        }
+        p {
+            text-align: justify;
+            text-indent: 30px; /*-- para dar paragrafo ao texto */
+        }
+    </style>
+</head>
+<body>
+
+SELETORES PERSONALIZADOS
+mod 15/1 usando o id com css
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal" class="basico">criando sites com html css</h1>
+    <h1 class="destaque">criando sites com html</h1>
+    <h2 class="basico destaque">html basico</h2>
+    <p>consectetur  <spam class="basico">Provident nesciunt, nulla libero molestias</spam> illo quisquam dolor fugit sit quos, nam aliquam dolores sed. Repellendus itaque accusantium quos amet. Dicta, magnam.</p>
+    <h2 class="inter">html itermediario</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nesciunt, nulla libero molestias illo quisquam dolor fugit sit quos, nam aliquam dolores sed. Repellendus itaque accusantium quos amet. Dicta, magnam.</p>
+    <h2 class="avancado">html avancado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nesciunt, nulla libero molestias illo quisquam dolor fugit sit quos, nam aliquam dolores sed. Repellendus itaque accusantium quos amet. Dicta, magnam.</p>
+    <h1>aprendendo css</h1>
+    <h2 class="basico">css basico</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nesciunt, nulla libero molestias illo quisquam dolor fugit sit quos, nam aliquam dolores sed. Repellendus itaque accusantium quos amet. Dicta, magnam.</p>
+    <h2 class="inter">css inter</h2>
+    <p>Lorem</p>
+    <h2 class="avancado">avancado</h2>
+    <p>
+</body>
+</html>
+CSS
+/* 
+    em HTML é id    = em CSS é # - só pode elemento
+    em HTML é class = em CSS é . pode varios elementos   
+*/
+body {
+    background-color: rgb(205, 255, 203);
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: rgb(10, 54, 39);
+}
+/* -- seletor personalizado -- */
+ h1#principal {
+    text-align: center;
+    background-color: green;
+ /*   color: white; */
+ }
+h2 {
+    color: rgb(3, 85, 57);
+}
+.basico {
+color: rgb(235, 20, 20);
+font-weight: bold;
+}
+.inter {
+color: blueviolet;
+}
+.avancado {
+color: rgb(145, 255, 0);
+}
+.destaque {
+background-color: rgb(255, 255, 0);
+}
+
+mod 15/3 pseudo classes em css
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+        /* pseudo elemento */
+        div:hover { /* passando mouse por cima */
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>
+
+HOVER
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: black;
+            width: 300px;
+        }
+
+        div:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>exemplo hover</h1>
+    <p>passe o mouse sobre o texto abaixo</p>
+    <div>
+        passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>fim do exemplo</p>
+</body>
+
+mod 15/2
+novas pseudo-classes
+:visit { } /*qnd o link ja esta visitado
+:hover { } /*qnd mouse está em cima, igual la de cima)
+:active { } /*qnd clica (e segura)
+a:visited { color: darkred }
+a:hover { color: black; text-decoration: underline; }
+a:active { color: yellow; }
+
+pseudo elementos
+::before { adiciona coisa antes do texto }
+::after { adiciona coisa depois do texto }
+a::before {
+            content: ' !!! ';
+        }
+
+a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+
+# = id
+. = class
+: = pseudo-class
+:: = pseudo-element
+> = children
+
+CAPITULO 16 - MODELO DE CAIXAS
+MOD 16/1
+CAIXAS BOX LEVEL - ocupa tela inteira
+height - altura
+width - largura
+border - tracar linha em volta da borda
+padding - (acolchoamento ou preenchimento) separa o box do texto com a borda
+margin - espaco externo após borda
+outline - contorno ou traçado - espaço após a borda (dentro de margin)
+
+
+exemplos
+<div>
+h1-h6
+p
+main
+header
+nav
+article
+aside
+footer
+form
+video
+
+CAIXAS IN LINE LEVEL - 
+<span>
+a
+code
+small
+strong
+em
+sup-sub
+label
+button
+input
+select
+
+MOD 16/2
+ferramenta DEV TOOLS - tres pontinhos > mais ferramentas > ferramenta do desenvolvedor
+vc consegue "brincar" (aba style) com os todos tamanhos de borda, margem, padding sem alterar o codigo
+<style>
+        h1 {
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+        a {
+            border-width: 10px;
+            border-style: groove;
+            border-color: red;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+
+MOD 16/3
+margin: auto - centralizar
+display: block/inline - altera a caracteristica da caixa pelo que for selecionado
+    <style>
+        h1 {
+            background-color: lightgray;
+            
+            /* display: inline;  - alteraria o block pra inline*/
+
+            height: 300px;
+            width: 300px;
+            
+            
+            border: 10px solid darkslategray;
+            /*em cima tem o shortharnds do border
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            */
+            
+            padding: 10px 10px 10px 10px;
+            /*como é tudo igual pode usar só 1x o 10px, da pra usar usando 2x: 10px 20px
+            ai altera 10 em cima e em baixo e 20 na dir e esquerda*/
+            /*shorthand do padding - sempre sentido horario comecando do top
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            */
+
+            margin: 20px auto 40px auto;
+            /*inativei pra testar margin auto (centralizar    
+            margin: auto;        
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            */
+
+            outline: 5px dashed salmon;
+            /*shorthand outline
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: red;
+            */
+        }
+
+MOD16/4 - GROUPING TAGS
+ <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: rgb(70, 68, 68);
+            padding: 10px;
+            margin: 10px;
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        article {
+            background-color: lightgray;
+        }
+        article > aside {
+            background-color: rgb(128, 125, 125);
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px; 
+        }
+        #assuntos {
+            color: red;
+            background-color: lightgrey;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>meu site</h1>
+    <nav>
+        <a href="">link1</a>
+        <a href="">link2</a>
+        <a href="">link3</a>
+        <a href="">link4</a>
+        <a href="">link5</a>
+    </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>esportes noticias politica  tecnologia</p>
+        </section>
+        <section id="noticias">
+        <article>
+            <h2>noticias sobre brasil</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ullam incidunt rem laboriosam laborum recusandae facilis. Officiis mollitia corrupti doloribus? Earum fuga eum hic fugit exercitationem, amet assumenda incidunt maiores.</p>
+            <aside>
+                <p>artigo escrito por lucas</p>
+            </aside>
+        </article>
+        <article>
+
+        </article>
+        </section>
+    </main>
+    <footer>
+        <p>desenvolvido por lucas somaio</p>
+    </footer>
+</body>
+</html>
+
+MOD 16/5 SOMBRA NAS CAIXAS
+BOX-SHADOW 1PX 1PX 1PX BLACK
+DA PRA FAZER PELO DEV TOOLS MAS EU NAO CONSEGUE PQ A FERRAMENTA MUDOU
+
+MOD 16/6 CAIXAS COM VERTICES ARREDONDADOS
+BORDER-RADIUS 20PX 20 PX 20PX 20PX
+como eh tudo igual, pode usar um só
+da pra fazer 
+border-radius 10px 20px
+10px em cima e em baixo
+20px direita e esquerda
+border-radius 50% faz uma bola
+da pra fazer no devtools, mas nao consegui pq a ferramenta mudou
+
+MOD 16/7 BORDAS DECORADAS
+utilizado border image pra fazer borda decorada 
+da pra ser editado no devtools
+ h1 {
+            width: 200px;
+            border: 20px solid black;
+            padding: 10px;
+
+            border-image: url('borda.png') 26 repeat;
+            /*shorthand
+            border-image-source: url('borda.png');
+            border-image-slice: 26;
+            border-image-repeat: repeat;
+            */
+        }
+
+mod17 - projeto
+mod17/6 - variaveis no css
+:root {
+    --cor0:#c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android',  cursive;
+}
+
+
+mod 17/7 - reponsividade para sites
+chrome plugin window-resizer para mostrar o tamanho da tela atula e simular outros
+ <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            /* troquei comds abaixo    
+            width: 800px; */
+
+            /*tava 320px, mudei pra 280 por causa dar margens */
+            min-width: 280px;
+            max-width: 800px;
+            /* vc limita o tamanho do conteúdo para se adaptar aos tamanhos de tela */
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+	<body>
+	  <picture> - /* dentro de body */
+            /* source media altera a imagem qnd a tela chegar no tamanho especificado */
+		<source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+        </picture>
+
+
+mod 17/8
+aplicou a responsividade ao arquivo pincipal android.html

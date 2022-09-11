@@ -1,0 +1,264 @@
+loren
+github.com/gustavoguanabara
+gustavoguanabara.github.io
+
+video 12
+h1 titulo
+hr faz uma linha 
+p paragrafo
+
+video 13 e 14
+<p> paragrafo
+<br> quebra de linha
+nao usar <br><Br><br> para dar mais espacamentos entre linha
+
+caracteres especiais usar & (tabela de nomes dos simbolos no pdf aula 14)
+
+emojis usar com &#x(codigo) [pegar codigo no site emojipedia.org]
+
+video 15
+sites pra procurar imagens
+google imagens
+unsplash
+pexels
+entre outros
+
+video 16 - gimp - redefenir tamanhos e resolucoes das imagens
+
+video 17 - <img>
+escolher, mudar tamanho
+usando img mesma pasta, de outra pasta ou da web
+
+video 18 - favicon
+favicon (icone favorito) <link.favicon>
+iconarchive (site para icones)
+favcon.cc site desenhar icone
+favcon.io site de fazer icone (a partir de image ou escrita)
+
+video 19 - hierarquia de títulos
+h1, h2, h3...h6(máximo)
+loren escreve um paragrafo blablabla
+
+video 20 - semantica - formatacao de textos
+html significado/semantica
+css forma/estilo
+html4
+<font color= size= 
+ <bg color=21654> (descontinuado)
+entre outros
+<body>
+    <h1>exemplto semantica</h1>
+    <p>eu moro na rua <address>av tiradentes, 687</address> </p> //<u> para endereco</u> underline (descontinuado)
+</body>
+agora é no css
+<style>
+ body {
+background-color:
+}
+</style>
+
+video 21 semantica (forma ou sentido)- negrito / italico
+dica ctrl+shift+p (envonver com abreviacao)
+se usar <i>italico</i> vc apenas diz a forma do texto
+se usar <em>emphasis/enfase</em> vc da um sentido ao texto
+ex. <u>underline</u> forma
+    <strong>forca/destaque</strong> semantico, ou seja, da um sentido ao texto
+<u><i> nao faz sentido no dias de hoje usar em dia
+
+video 22 formatacoes especiais - mesmo exercicio video 20
+aprendido tags:
+MARK para marcar um texto (tipo caneta marca texto mesmo)
+DEL texto excluido - riscar o texto no meio para ele ser lido mas nao considerado
+INS texto inserido - para dar enfase e dizer que foi inserido depois (ele faz um underline)
+SUP texto sobrescrito - para inserir textos do tipo x20+2 (elevado)
+SUB texto subscrito - para inserir textos do tipo h2o (formula agua de um jeito diferente)
+*BIG para deixar o texto um pouco maior (descontinuado)
+*SMALL para deixar um texto escrito um pouco menor (talvez descontinuado)
+
+nao tem 23 pq aqui descobri que esse ja era 24
+
+video 24 - citacoes e codigos
+tag aprendidas
+PRE usado antes do CODE para manter os espaçamentos de acordo com feito no código
+CODE para dizer que o texto é um código (programação)
+    <pre>
+        <code>
+    num = int(input('digite um numero'))
+    if num % 2 == 0;
+        print(f'0 numero {num} é par')
+    else:
+        pirnt(f'o numero {num} é ímpar')
+        </code>
+    </pre>
+
+CITACOES
+Q quote citação - na página ja cria os ""
+<BLOCKCODE CITE="> cria um espaçamento de citação, coloque um link de um livro do google books na opcao CITE
+
+ABREVIACOES
+<abbr title="> exemplo HTML, o escrito em TITLE aparece qnd para o mouse em cime
+
+TEXTO INVERTIDO
+inutil mas vou anotar pq né
+<bdo dir='rtl ou rlt'> direita pra esquerda ou vice e versa
+
+video 25 listas - ol ul
+OL ordered list type: 1 A a I i
+UL unorderd list type: circle square disc
+LI para incluir linha na lista
+
+video 26 listas mistas e de definicoes
+exercicio junto com video 25
+foi falado como misturar listas ol,ul
+listas e sublistas "infinitas"
+DL listas de definicoes
+DT termo ex html
+DD descricao ex linguagem para conteudo
+
+video 27 links e ancoras
+<a href="" target="_blanc" rel="external">
+comando para link
+href eh o link
+target e rel servem para o link abrir em outra aba e manter sua pagina aberta
+
+aula 28 links internos
+exercicio da aula 27
+foi criado 3 paginas com links que se redirecionavam
+../ para voltar as pastas
+rel="next" indica aos mecanismos de buca a pagina para voltar o seguir
+rel="prev"
+rel="nofollow" para os mecanismos nao seguirem sua pagina a partir dali
+
+aula 29 links para arquivo
+exercicio aula 27
+para download apenas colocar link do arquivo no a href
+types application/pdf application/zip
+descobre type do arquivo nesse site iana.org/assignments/media-type/
+arquivos pdf navegador le, clicar com direito salvar link para download
+arquivo zip baixa direto pro pc
+
+aula 30 desafio 05 e 06 - easy
+
+aula 31
+criei 3 imagens no gimp 
+p,m,g
+
+video 32 - imagens que se adaptam sozinhas
+mesmo exerciciovideo 31
+<picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+dispositivos com no maximo 750px carrega foto P
+dispositivos com no maximo de 1050px de tamanho de tela carrega foto m
+dispositivos acima disso carrega foto g
+
+video 33 colocando audio no seu site
+mesmo exercico video 32
+    <audio preload="metadata" controls loop>
+--------- metadata pro site carregar  apenas informacoes do audio, nao o arquivo todo
+--------- auto -carregaga o arquivo todo para o  site entender que a pagina carregou 100%
+---------- none - nao carrega nada, somente quando der play
+
+ -------navegador vai tocar o que encontrar primeiro da ordem de cima pra baixo
+        <source src="midias/happy.mp3" type="audio/mpeg">
+        <source src="midias/happy.ogg" type="audio/ogg">
+        <source src="midias/happy.wav" type="audio/wav">
+        <!--nao usar wav oq eh pesado-->
+        <p>infelizmento seu navegador nao consegue reproduzir audio`. <a href="midias/happy.mp3">clique aqui para ouvir o audio</a></p>
+    </audio>
+
+
+video 34 formatos de video para  seu site
+extensoes mais usados mp4 webn ogv m4v
+nessa aula foi feito um download de um video do site pexels.com
+e convertido ele pra outras 2 extensoes m4v e webn pelo app handbreak
+
+video 35 
+<video src="midia/cafe.ogv" width="500" height="500" controls></video>
+assim ja da
+para adicionar todas extensoes (por causa dos navegadores)..
+<video height="500" poster="imagens/capa.png" loop controls>
+/!--fazer na ordem do menor arquivo pro maior--/
+    <source src="midia/cafe.webm" type="video/webm">
+    <source src="midia/cafe.mp4" type="video/mp4">
+    <source src="midia/cafe.ogv" type="video/ogv">
+    <source src="midia/Cafe.m4v" type="video/m4v">
+    <p>seu navegador nao tem compatitividade com videos</p>
+</video>foi utilizado um site (pesquisar google) para converter o video de mp4 para ogv
+para video com hospedagem local é bom ter varias extensoes pq tem navegador que nao roda uma ou outra extensao
+
+video 36 incorporacao videos externos
+mesmo exercicio 35
+entrar no site (youtube/vimeo) compartilhar // incorporar (copiar codigo)
+
+video 37 desafio 09 EASY
+
+video 38 estilos css inline
+consiste em vc adicionar estilos (design) do site em cada linha do html
+<body background-color:"" fontfamily="arial">
+<h1 style="color: red">
+jeito antigo de fazer (ou fazer um uso pontual)
+dessa maneira se vc precisar alterar uma cor/fundo (entre outros)
+vc terá que ir de linha em linha alterando o codigo
+polui de mais o codigo
+
+video 39 estilos css internos
+vc configura o estilo de um forma ampla usando <style> no HEAD do html
+assim ele ja aplica a todos os elementos da pagina (H1, h2, p, etc..)
+    <title>Estilos locais ou internos</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        h1  {
+            color: darkblue;
+        }
+        h2  {
+            color: darkred;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+
+video 40 estilos css externos
+com essa tecnica vc cria um arquivo.css 
+para ser aplicado a qualquer pagina do projeto com o comando link
+<link rel="stylesheet" href="style.css">
+pode  incluir mais de 1 arquivo css
+e pode usar css interno e css em linhas tbm, tudo junto
+mesmo importando o arquivo style.css
+vc pode incluir 
+<style> h1 { text-decoration: unverline } ai apenas nessa pagina 
+o H1 vai ficar sublinhado
+arquivo css ficou assim:
+@charset "UTF-8";
+
+body {
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1  {
+    color: darkblue;
+}
+h2  {
+    color: darkred;
+}
+p {
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+

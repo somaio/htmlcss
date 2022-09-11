@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            /* troquei comds abaixo    
+            width: 800px; */
+
+            /*tava 320px, mudei pra 280 por causa dar margens */
+            min-width: 280px;
+            max-width: 800px;
+            /* vc limita o tamanho do conteúdo para se adaptar aos tamanhos de tela */
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>teste responsividade</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi aperiam, magni voluptas error velit blanditiis corporis beatae tenetur autem labore quos esse neque hic, sequi vero illum eum. Voluptatem, quaerat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et natus rem laboriosam modi saepe explicabo est placeat, harum fuga dolores voluptatibus libero consequuntur doloremque rerum consequatur temporibus ut ducimus dicta.
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, cumque! Pariatur, eum. Harum maiores nostrum iure est praesentium, facere similique quisquam, totam voluptatibus minima, nobis voluptates error. Cum, nemo pariatur.</p>
+        </p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+        </picture>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius eaque officiis saepe inventore necessitatibus illo earum atque animi voluptatum tempore cum corporis praesentium obcaecati neque ex pariatur itaque, modi mollitia. </p>
+    </main>
+    
+</body>
+</html>
