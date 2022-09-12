@@ -98,3 +98,14 @@ div.bloco {
             background-image: url('imagens/wallpaper003.jpg');
             background-position: top left;
         }
+
+cap 19/5 mudando tamanho das imagens
+ body {
+            height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+/* background size: cover (ocupa 100% viewpoint), contain (vai sempre mostrar a img inteira mas distorce), auto
+da pra usar com tamanho da img tbm tipo 100% 100%
